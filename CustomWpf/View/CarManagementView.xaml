@@ -23,8 +23,18 @@
         <DataGrid.Columns>
             <DataGridComboBoxColumn Header="Make"  
                                     ItemsSource="{Binding Data.Makes, Source={StaticResource proxy}}" 
-                                    SelectedItemBinding="{Binding Make}">
+                                    SelectedItemBinding="{Binding Make}"
+                                    ElementStyle="{DynamicResource MetroComboBoxReadOnly}"
+                                    EditingElementStyle="{DynamicResource MetroComboBox}">
             </DataGridComboBoxColumn>
+
+            <DataGridComboBoxColumn Header="Make"  
+                                    ItemsSource="{Binding Data.Makes, Source={StaticResource proxy}}" 
+                                    SelectedItemBinding="{Binding Make}"
+                                    ElementStyle="{DynamicResource MetroComboBox}"
+                                    EditingElementStyle="{DynamicResource MetroComboBox}">
+            </DataGridComboBoxColumn>
+            
             <DataGridTextColumn Binding="{Binding Make}"        Header="Make"/>
             <DataGridTextColumn Binding="{Binding Name}"        Header="Name"/>
             <DataGridTextColumn Binding="{Binding Power}"       Header="Power"/>

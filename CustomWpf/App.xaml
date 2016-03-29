@@ -34,6 +34,23 @@
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
+
+            <Style x:Key="MetroComboBoxReadOnly"  TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MetroComboBox}" >
+                <Setter Property="IsReadOnly" Value="True"/>
+            </Style>
+            
+            <Style TargetType="{x:Type DataGridComboBoxColumn}">
+                <Setter Property="ElementStyle">
+                    <Setter.Value>
+                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="EditingElementStyle">
+                    <Setter.Value>
+                        <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource {x:Type ComboBox}}" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
             
             <ResourceDictionary.MergedDictionaries>
                 <!-- MahApps.Metro resource dictionaries. Make sure that all file names are Case Sensitive! -->
