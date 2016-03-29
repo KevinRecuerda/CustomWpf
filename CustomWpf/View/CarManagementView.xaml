@@ -16,7 +16,15 @@
     
     <DataGrid ItemsSource="{Binding Cars}"
               AutoGenerateColumns="False">
+        <DataGrid.Resources>
+            <model:BindingProxy x:Key="proxy" Data="{Binding}" />
+        </DataGrid.Resources>
+        
         <DataGrid.Columns>
+            <DataGridComboBoxColumn Header="Make"  
+                                    ItemsSource="{Binding Data.Makes, Source={StaticResource proxy}}" 
+                                    SelectedItemBinding="{Binding Make}">
+            </DataGridComboBoxColumn>
             <DataGridTextColumn Binding="{Binding Make}"        Header="Make"/>
             <DataGridTextColumn Binding="{Binding Name}"        Header="Name"/>
             <DataGridTextColumn Binding="{Binding Power}"       Header="Power"/>

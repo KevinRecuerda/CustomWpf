@@ -98,6 +98,7 @@
     <Compile Include="Converter\BoolToDataGridCellStyleConverter.cs" />
     <Compile Include="Converter\MultiValueConverter.cs" />
     <Compile Include="Model\AlterableObservableObject.cs" />
+    <Compile Include="Model\BindingProxy.cs" />
     <Compile Include="Model\DataGridCellStyleHelper.cs" />
     <Compile Include="Model\UpdatedItem.cs" />
     <Compile Include="ViewModel\CarManagementViewModel.cs" />

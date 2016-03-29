@@ -7,12 +7,19 @@ namespace CustomWpf.ViewModel
     public class CarManagementViewModel : ViewModelBase
     {
         private ObservableCollection<CarView> cars;
+        private ObservableCollection<string> makes;
 
         public ObservableCollection<CarView> Cars
         {
             get { return this.cars; }
             set { this.Set(ref this.cars, value); }
         }
+
+        public ObservableCollection<string> Makes
+        {
+            get { return this.makes; }
+            set { this.Set(ref this.makes, value); }
+        } 
 
         public CarManagementViewModel()
         {
@@ -27,6 +34,14 @@ namespace CustomWpf.ViewModel
             };
 
             this.Cars[0].ArePropertiesModified["TopSpeed"] = true;
+
+            this.Makes = new ObservableCollection<string>()
+            {
+                "Ford",
+                "Lamborghini",
+                "Audi",
+                "BMW"
+            };
         }
     }
 }
