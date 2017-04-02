@@ -95,15 +95,24 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Converter\AppStatusToColorConverter.cs" />
     <Compile Include="Converter\BoolToDataGridCellStyleConverter.cs" />
     <Compile Include="Converter\MultiValueConverter.cs" />
+    <Compile Include="Converter\PlatformToColorConverter.cs" />
+    <Compile Include="Converter\StringToUpperConverter.cs" />
+    <Compile Include="Converter\UniformGridRowColumnConverter.cs" />
     <Compile Include="Model\AlterableObservableObject.cs" />
+    <Compile Include="Model\AppState.cs" />
     <Compile Include="Model\BindingProxy.cs" />
     <Compile Include="Model\DataGridCellStyleHelper.cs" />
     <Compile Include="Model\UpdatedItem.cs" />
     <Compile Include="ViewModel\CarManagementViewModel.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
+    <Compile Include="ViewModel\MonitoringViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
+    <Compile Include="View\MonitoringView.xaml.cs">
+      <DependentUpon>MonitoringView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\CarManagementView.xaml.cs">
       <DependentUpon>CarManagementView.xaml</DependentUpon>
     </Compile>
@@ -120,6 +129,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\MonitoringView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

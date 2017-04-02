@@ -15,6 +15,7 @@
     </UserControl.Resources>
     
     <DataGrid ItemsSource="{Binding Cars}"
+              dgx:DataGridFilter.IsAutoFilterEnabled="True"
               AutoGenerateColumns="False">
         <DataGrid.Resources>
             <model:BindingProxy x:Key="proxy" Data="{Binding}" />
